@@ -11,12 +11,11 @@ public class Word_Studey {
 		s=s.toUpperCase();
 		char a='?';
 		char b='?';
-		int num=0;//,
+		int num=0;
 		int cnt=1;//2,2
 		int max=1;//2,2
 		//cnt1[]  //2,  ,2
 		int cnt1[]=new int[s.length()];
-		
 		
 		for(int i=0;i<s.length();i++) {
 			for(int j=i+1;j<s.length();j++) {
@@ -25,12 +24,17 @@ public class Word_Studey {
 				
 				if(cnt>1&&cnt==max) 
 					max=cnt;
+				
+				System.out.println(num);
+				cnt1[i]=max;
 				a=s.charAt(i);
 				
 						}
 			cnt=1;
-			
 		}
+			
+		
+		System.out.println(Arrays.toString(cnt1));
 		System.out.println(s);
 		System.out.println(max);
 		System.out.println(a);

@@ -1,8 +1,9 @@
 package BBackjoon;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class FInd_Word {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
@@ -27,7 +28,7 @@ public class Main {
 		
 		System.out.println(cnt);
 		System.out.println(ct);
-		System.out.println(num);
+		System.out.println("´Ü¾î¼ö"+num);
 		
 	}
 
