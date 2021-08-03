@@ -3,33 +3,53 @@ package BBackjoon;
 import java.util.Scanner;
 
 public class Wording_checker {
-/*for(int j=s.length()-1;j>l;j--)
-				if(s.charAt(i)==s.charAt(j))*/
+	public static Scanner sc=new Scanner(System.in);
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		String s=sc.next();
-		int l=(s.length()-1);
+		int n=sc.nextInt();
 		int cnt=0;
-		int count=0;
 		
-		for(int i=0; i<=l-1;i++)
-			for(int j=1; j<=l; j++) {
-				if(s.charAt(i)!=s.charAt(j)) {
-					cnt++;
-					if(cnt==(l-i))
-						count++;
-					cnt=0;
-					
-						
-					}
-					
-				
-				}
-		System.out.println(count);}
+		while(n>0) {
+			if(check()==true)
+				cnt++;
+			n--;
+		}
+		System.out.println(cnt);
+		
+		
+		
+	}
 	
+	
+	
+	
+	
+	
+	
+	public static boolean check() {
+		
+		String s=sc.next();
+		int ch=0;
+		int pre=0;
+		boolean alp[]=new boolean[26];
+		for(int i=0;i<s.length();i++) {
+			ch=s.charAt(i);
+			if(ch!=pre) {
+				if(alp[ch-'a']==false) {
+				alp[ch-'a']=true;
+				pre=ch;
+				}
+				else 
+				return false;
+				}
+			else continue;
 
+		}
+		return true;
+		
+		}
 }
-
+			
+		
 	
 
 		
