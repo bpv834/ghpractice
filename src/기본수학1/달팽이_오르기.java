@@ -10,13 +10,18 @@ public class 달팽이_오르기 {
 		int b=sc.nextInt();
 		int v=sc.nextInt();
 		int c=(a-b);
-		double dap=c/v;
-		int e=c%v;
-			
+		int t=v-c;
+		int dap=0;
+		int e=t%v;
+		if(e==0) {
+			dap=t/c;
+		}
+		if(e!=0)
+			dap=(c/v)+1;
 		
-	
+		
+		System.out.println(e);
 		System.out.println(dap);
-		
 		
 			
 	}
